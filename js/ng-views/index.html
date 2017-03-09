@@ -1,7 +1,7 @@
-<div ng-repeat="post in vm.posts">
+<h2>Posts</h2>
+<a data-ui-sref="postNew">New Post</a>
 
-    <p>{{post.author}}</p>
-    <p>{{post.body}}</p>
-    <img src="{{post.photo_url}}">
+<div data-ng-repeat="post in vm.posts">
+  <p><a data-ui-sref="postShow({id: post.id})">{{post.author}}</a> || <a data-ui-sref="postEdit({id: post.id})">Edit</a></p>
 
 </div>
